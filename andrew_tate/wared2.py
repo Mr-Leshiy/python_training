@@ -41,35 +41,48 @@ def less_equal (a, b):
 def check (a):
     c = equal(a=a, b=1) or greater_equal(a=a,b=2) and not_equal(a=a, b=3) and less(a=a,b=5)
     return c
+
+def check2 (a):
+    c = a == 1 or a >= 2 and a != 3 and a < 5
     
 
 print(bool_and(True, True))
 print(bool_and(True, False))
 print(bool_and(False, False))
 print(bool_and(False, True))
-print("||||||||||||||||||||||")
+
+print("-----------------")
+
 print(bool_or(True, True))
 print(bool_or(True, False))
 print(bool_or(False, False))
 print(bool_or(False, True))
-print("||||||||||||||||||||||")
+
+print("-----------------")
+
 print(bool_not(True))
 print(bool_not(False))
-print("||||||||||||||||||||||")
+
+print("-----------------")
+
 print(bool_xor(True, True))
 print(bool_xor(True, False))
 print(bool_xor(False, False))
 print(bool_xor(False, True))
-print("||||||||||||||||||||||")
+
+print("-----------------")
+
 print(not_equal(2,2))
 print(equal(2,2))
 print(not_equal(True,True))
 print(equal(True,True))
 print(not_equal("123","123"))
 print(equal("123","123"))
-print("||||||||||||||||||||||")
+
+print("-----------------")
+
 print(greater(5, 4))
-print(grater_equal(5, 6))
+print(greater_equal(5, 6))
 print(less(8, 10))
 print(less_equal(8,8))
 print("-----------------")
