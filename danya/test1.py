@@ -38,3 +38,6 @@ print(g)
 print(w)
 print(x)
 print(y)
+print('__')
+a = (1 + 2) * 3
+print(a)
