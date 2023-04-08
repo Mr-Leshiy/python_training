@@ -5,8 +5,6 @@ def factorial(a):
         return None
     return a * factorial(a-1)
 
-print(factorial(-5))
-
 def fibonachi(a):
     if a < 0:
         return None
@@ -16,12 +14,42 @@ def fibonachi(a):
         return 1
     return (fibonachi(a-1) + fibonachi(a-2))
 
-print(fibonachi(10))
+def fib_2_0(a):
+    index = 2
+    fn_1 = 0
+    fn = 1
+    if a == 0:
+        return 0
+    if a == 1:
+        return 1
+    while index < a:
+        fn = fn + fn_1
+        fn_1 = fn - fn_1
+        index += 1
+    return fn
 
-# def factorial_2_0(a):
-#     b = range(1, a)
-#     for i in b:
+def factorial_2_0(a):
+    index = 1
+    result = 1
+    while index <= a:
+        result *= index
+        index += 1
+    return result
 
-#     return a
+def sort_bublle(a):
+    if len(a) == 0:
+        return None
+    progonka = 0
+    while progonka < len(a):
+        index = 0
+        while index < (len(a) - 1 - progonka):
+            if a[index] > a[index + 1]:
+                lol = a[index + 1]
+                a[index + 1] = a[index]
+                a[index] = lol
+            index += 1
+        progonka += 1
+    return a
 
-# print(factorial_2_0(3))
+print(fib_2_0(100))
+print(fibonachi(100))

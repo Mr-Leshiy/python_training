@@ -1,5 +1,6 @@
-a = [1]
-b = []
+a = input().split()
+for i in range(len(a)):
+    a[i] = int(a[i])
 
 # Сортировка пузырьком
 
@@ -10,7 +11,7 @@ def sort_bublle(a):
     while progonka < len(a):
         index = 0
         while index < (len(a) - 1 - progonka):
-            if a[index] < a[index + 1]:
+            if a[index] > a[index + 1]:
                 lol = a[index + 1]
                 a[index + 1] = a[index]
                 a[index] = lol
@@ -68,23 +69,3 @@ print(find_min(a))
 #     return b[-1]
 
 # #ДЗ: написать для минимума и другой для макса с одним циклом
-
-# !!! QUESTION !!!
-
-# def sort_bublle(a):
-#     indexa = 0
-#     lol = None
-#     while indexa < len(a):
-#         indexb = 0
-#         while indexb < len(a):
-#             if a[indexa] > a[indexb]:
-#                 lol = a[indexb]
-#                 a[indexb] = a[indexa]
-#                 a[indexa] = lol
-#                 indexa += 1
-#             indexb += 1
-#             if indexa == (len(a) - 1):
-#                 indexa = 0
-#         indexa += 1
-#     return a
-# print(sort_bublle(a))
