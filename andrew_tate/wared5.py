@@ -51,5 +51,37 @@ def sort_bublle(a):
         progonka += 1
     return a
 
-print(fib_2_0(100))
-print(fibonachi(100))
+def dz(a):
+    if a == 0:
+        return 1
+    index = 1
+    fn_1 = 1
+    fn = 2
+    while index < a:
+        fn = fn * fn_1
+        fn_1 = fn / fn_1
+        index += 1
+    return int(fn)
+
+def dz_2(a):
+    if a == 0:
+        return 0
+    if a == 1:
+        return 1
+    if a == 2:
+        return 1
+    index = 2
+    fn = None
+    fn_1 = 1
+    fn_2 = 1
+    fn_3 = 0
+    while index < a:
+        fn = fn_1 + fn_2 + fn_3
+        fn_3 = fn_2
+        fn_2 = fn_1
+        fn_1 = fn
+        index += 1
+    return int(fn)
+        
+print(dz(5))
+print(dz_2(5))
