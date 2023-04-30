@@ -28,6 +28,20 @@ def fib_2_0(a):
         index += 1
     return fn
 
+def fib_3_0(a):
+    if a == 0:
+        return 0
+    if a == 1:
+        return 1
+    index = 1
+    fn_1 = 1
+    fn_2 = 0
+    while index < a:
+        fn_1 = fn_1 + fn_2
+        fn_2 = fn_1 - fn_2
+        index += 1
+    return fn_1
+
 def factorial_2_0(a):
     index = 1
     result = 1
@@ -51,17 +65,17 @@ def sort_bublle(a):
         progonka += 1
     return a
 
-def dz(a):
+def dz_1(a):
     if a == 0:
         return 1
-    index = 1
+    index = 2
     fn_1 = 1
     fn = 2
     while index < a:
         fn = fn * fn_1
         fn_1 = fn / fn_1
         index += 1
-    return int(fn)
+    return fn
 
 def dz_2(a):
     if a == 0:
@@ -71,7 +85,6 @@ def dz_2(a):
     if a == 2:
         return 1
     index = 2
-    fn = None
     fn_1 = 1
     fn_2 = 1
     fn_3 = 0
@@ -81,7 +94,8 @@ def dz_2(a):
         fn_2 = fn_1
         fn_1 = fn
         index += 1
-    return int(fn)
+    return fn_1
         
-print(dz(5))
+print(dz_1(5))
 print(dz_2(5))
+print(fib_3_0(5))
