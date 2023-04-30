@@ -42,8 +42,8 @@ print(fact(3))
 print('____')
 print(fact2(5))
 print('____')
-a = 5
+a = 17
 print(Fibonacci(a))
 print('____')
-c = 100
+c = 32
 print(Fib(c))
